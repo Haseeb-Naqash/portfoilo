@@ -3,7 +3,7 @@
 const blogData = {
   blog1: {
     title: "How to Create a High-Converting Mobile App Landing Page in 2025",
-    date: "Sunday, January 14, 2023",
+    date: "Sunday, January 14, 2025",
     image: "img/blog/1.jpg", // Ensure image path is correct
     content: `
       <h3>What Is a Mobile App Landing Page?</h3>
@@ -43,7 +43,7 @@ const blogData = {
   },
     blog2: {
       title: "10 Tips for Building a Successful E-commerce Website",
-      date: "Monday, February 20, 2023",
+      date: "Monday, February 20, 2025",
       image: "img/blog/2.jpg",
       content: `
         <h3>What Makes an E-commerce Website Successful?</h3>
@@ -70,7 +70,7 @@ const blogData = {
   
     blog3: {
       title: "Why SEO is Essential for Your Website's Success",
-      date: "Tuesday, March 5, 2023",
+      date: "Tuesday, March 5, 2025",
       image: "img/blog/3.jpg",
       content: `
         <h3>Understanding SEO</h3>
@@ -101,7 +101,7 @@ const blogData = {
   
     blog4: {
       title: "UI/UX Design Trends for 2025",
-      date: "Friday, April 12, 2023",
+      date: "Friday, April 12, 2025",
       image: "img/blog/4.jpg",
       content: `
         <h3>What is UI/UX Design?</h3>
@@ -124,7 +124,7 @@ const blogData = {
   
     blog5: {
       title: "How Digital Marketing Drives Business Growth",
-      date: "Thursday, May 2, 2023",
+      date: "Thursday, May 2, 2025",
       image: "img/blog/5.jpg",
       content: `
         <h3>The Power of Digital Marketing</h3>
@@ -147,7 +147,7 @@ const blogData = {
   
     blog6: {
       title: "The Future of Web Development: What to Expect in 2025",
-      date: "Saturday, May 11, 2023",
+      date: "Saturday, April 11, 2025",
       image: "img/blog/6.jpg",
       content: `
         <h3>The Evolution of Web Development</h3>
