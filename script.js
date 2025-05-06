@@ -179,6 +179,43 @@ ScrollReveal({
     // reset: true ,
 });
 
+// const blogData = {
+//     blog1: {
+//       title: "Mobile App Landing Page",
+//       date: "Sunday, Jan 14, 2023",
+//       image: "img/blog/1.jpg",
+//       content: `This is a full description of the mobile app landing page, including goals, technologies used, and the impact it had on users.`
+//     },
+//     blog2: {
+//       title: "Design Systems in UI",
+//       date: "Monday, Feb 20, 2023",
+//       image: "img/blog/2.jpg",
+//       content: `A deep dive into design systems, their benefits for scalable design, and tools used like Figma and Storybook.`
+//     },
+//     blog3: {
+//       title: "Next.js vs React",
+//       date: "Wednesday, Mar 5, 2023",
+//       image: "img/blog/3.jpg",
+//       content: `We compare performance, routing, and SEO between React and Next.js to help you choose the right framework.`
+//     },
+//     // add more as needed
+//   };
+
+//   function openBlogPopup(blogId) {
+//     const data = blogData[blogId];
+//     document.getElementById('blogDetails').innerHTML = `
+//       <h2>${data.title}</h2>
+//       <span>${data.date}</span>
+//       <img src="${data.image}" alt="${data.title}" style="width:100%; margin:1rem 0; border-radius:10px;">
+//       <p>${data.content}</p>
+//     `;
+//     document.getElementById('blogPopup').style.display = 'flex';
+//   }
+
+//   function closeBlogPopup() {
+//     document.getElementById('blogPopup').style.display = 'none';
+//   }
+
 
 ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top" });
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });

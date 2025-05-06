@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- boxicon css link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <section class="portfolio" id="portfolio">
+        <div class="main-text">
+            <h2 class="heading">Portfolio</h2>
+            <span>what i will do for you</span>
+        </div>
+        <div class="fillter-buttons">
+            <button class="button mixitup-control-active" data-filter="all">All Work</button>
+            <button class="button" data-filter=".web">Web Development</button>
+            <button class="button" data-filter=".uiux">UI/UX Design</button>
+            <button class="button" data-filter=".branding">Branding Design</button>
+        </div>
+    
+        <div class="portfolio-gallery">
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>E-commerce Web</h3>
+                    <p>Responsive online store with product listings, cart, and checkout features.</p>
+                    <a href="#" class="readMore" data-project="ecommerce">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/uni project.webp" alt="E-commerce Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Software House Web</h3>
+                    <p>Developed a user-friendly website for showcasing and downloading software, with secure links and responsive design.</p>
+                    <a href="#" class="readMore" data-project="software">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/optimerz.webp" alt="Software House Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Memar Mustaqbil Web</h3>
+                    <p>A platform for students and professionals to find jobs and internships, with features like job listings, applications, and user profiles.</p>
+                    <a href="#" class="readMore" data-project="memar">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/Memar.webp" alt="Memar Mustaqbil Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Meezab Property Web</h3>
+                    <p>A real estate website for listing and exploring properties in Turkey. Features include property search, filters, image galleries, and contact forms for inquiries.</p>
+                    <a href="#" class="readMore" data-project="property">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/Meezab Property.webp" alt="Meezab Property Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Hotel Web</h3>
+                    <p>A hotel booking site for Makkah and Madinah with room listings, booking forms, and location details for pilgrims and travelers.</p>
+                    <a href="#" class="readMore" data-project="hotel">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/Hotel.webp" alt="Hotel Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>House Cleaning Web</h3>
+                    <p>A professional cleaning service site with service listings, online booking, and contact options for clients across the USA.</p>
+                    <a href="#" class="readMore" data-project="cleaning">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/Perfect Touch.webp" alt="House Cleaning Web">
+                </div>
+            </div>
+    
+            <div class="portfolio-box mix branding">
+                <div class="portfolio-content">
+                    <h3>Meezab Air UK</h3>
+                    <p>A dedicated site for Umrah packages, visa assistance, and travel bookings with detailed service info and easy inquiry options.</p>
+                    <a href="#" class="readMore" data-project="airuk">Explore More</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/Meezab UK.webp" alt="Meezab Air UK">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Portfolio Modal -->
+        <div class="portfolio-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <span class="close-modal">&times;</span>
+                <div class="modal-slider">
+                    <div class="slider-container">
+                        <div class="slider-nav">
+                            <button class="slider-prev">&lt;</button>
+                            <button class="slider-next">&gt;</button>
+                        </div>
+                        <div class="slider-content">
+                            <img src="" alt="" class="active-slide">
+                            <div class="slider-details">
+                                <h3 class="project-title"></h3>
+                                <p class="project-description"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Portfolio Modal Styles */
+        .portfolio-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-container {
+            position: relative;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            margin: 5vh auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1001;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1002;
+        }
+        
+        .modal-slider {
+            width: 100%;
+            position: relative;
+        }
+        
+        .slider-container {
+            width: 100%;
+        }
+        
+        .slider-content {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .slider-content img {
+            max-width: 100%;
+            max-height: 60vh;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .slider-prev, .slider-next {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            z-index: 10;
+        }
+        
+        .slider-prev {
+            margin-left: 10px;
+        }
+        
+        .slider-next {
+            margin-right: 10px;
+        }
+        
+        .slider-details {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .project-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .project-description {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Portfolio modal functionality
+            const readMoreButtons = document.querySelectorAll('.readMore');
+            const portfolioModal = document.querySelector('.portfolio-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const modalOverlay = document.querySelector('.modal-overlay');
+            const projectTitle = document.querySelector('.project-title');
+            const projectDescription = document.querySelector('.project-description');
+            const activeSlide = document.querySelector('.active-slide');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            
+            // Store project data
+            const projects = {
+                ecommerce: {
+                    title: "E-commerce Web",
+                    description: "Responsive online store with product listings, cart, and checkout features.",
+                    images: ["img/portfolio/uni project.webp"]
+                },
+                software: {
+                    title: "Software House Web",
+                    description: "Developed a user-friendly website for showcasing and downloading software, with secure links and responsive design.",
+                    images: ["img/portfolio/optimerz.webp"]
+                },
+                memar: {
+                    title: "Memar Mustaqbil Web",
+                    description: "A platform for students and professionals to find jobs and internships, with features like job listings, applications, and user profiles.",
+                    images: ["img/portfolio/Memar.webp"]
+                },
+                property: {
+                    title: "Meezab Property Web",
+                    description: "A real estate website for listing and exploring properties in Turkey. Features include property search, filters, image galleries, and contact forms for inquiries.",
+                    images: ["img/portfolio/Meezab Property.webp"]
+                },
+                hotel: {
+                    title: "Hotel Web",
+                    description: "A hotel booking site for Makkah and Madinah with room listings, booking forms, and location details for pilgrims and travelers.",
+                    images: ["img/portfolio/Hotel.webp"]
+                },
+                cleananing: {
+                    title: "House Cleaning Web",
+                    description: "A professional cleaning service site with service listings, online booking, and contact options for clients across the USA.",
+                    images: ["img/portfolio/Perfect Touch.webp"]
+                },
+                airuk: {
+                    title: "Meezab Air UK",
+                    description: "A dedicated site for Umrah packages, visa assistance, and travel bookings with detailed service info and easy inquiry options.",
+                    images: ["img/portfolio/Meezab UK.webp"]
+                }
+            };
+            
+            let currentProject = null;
+            let currentSlideIndex = 0;
+            
+            // Open modal when "Explore More" is clicked
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectId = this.getAttribute('data-project');
+                    currentProject = projects[projectId];
+                    currentSlideIndex = 0;
+                    
+                    // Update modal content
+                    projectTitle.textContent = currentProject.title;
+                    projectDescription.textContent = currentProject.description;
+                    activeSlide.src = currentProject.images[0];
+                    activeSlide.alt = currentProject.title;
+                    
+                    // Show modal
+                    portfolioModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close modal
+            function closePortfolioModal() {
+                portfolioModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            closeModal.addEventListener('click', closePortfolioModal);
+            modalOverlay.addEventListener('click', closePortfolioModal);
+            
+            // Keyboard events
+            document.addEventListener('keydown', function(e) {
+                if (portfolioModal.style.display === 'block') {
+                    if (e.key === 'Escape') {
+                        closePortfolioModal();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        nextSlide();
+                    }
+                }
+            });
+            
+            // Slider navigation
+            function prevSlide() {
+                if (currentProject && currentProject.images.length > 1) {
+                    currentSlideIndex = (currentSlideIndex - 1 + currentProject.images.length) % currentProject.images.length;
+                    activeSlide.src = currentProject.images[currentSlideIndex];
+                }
+            }
+            
+            function nextSlide() {
+                if (currentProject && currentProject.images.length > 1) {
+                    currentSlideIndex = (currentSlideIndex + 1) % currentProject.images.length;
+                    activeSlide.src = currentProject.images[currentSlideIndex];
+                }
+            }
+            
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+        });
+    </script>
+</body>
+</html>
