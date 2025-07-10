@@ -7,7 +7,9 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 :root{
     --bg-color:#e3edf7;
     --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
