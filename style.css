@@ -141,6 +141,7 @@ span{
         left: 0;
         width: 100%;
         padding: 10px 20px;
+        border-radius: 20px;
       }
 
       .nav-links.show {
