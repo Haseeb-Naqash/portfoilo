@@ -4296,15 +4296,23 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 /* Fix for Service Pages Mobile Header Overlap */
 .service-details-page .main {
-  padding-top: 100px;
+  margin-top: 80px;
 }
+
+.page-title {
+  padding: 100px 0 60px 0;
+  position: relative;
+  background-color: var(--surface-color);
+}
+
 @media (max-width: 991px) {
   .service-details-page .main {
-    padding-top: 80px;
+    margin-top: 60px;
+  }
+  .page-title {
+    padding: 80px 0 40px 0;
   }
 }
