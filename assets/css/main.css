@@ -4299,3 +4299,12 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* Fix for Service Pages Mobile Header Overlap */
+.service-details-page .main {
+  padding-top: 100px;
+}
+@media (max-width: 991px) {
+  .service-details-page .main {
+    padding-top: 80px;
+  }
+}

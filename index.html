@@ -860,7 +860,6 @@
                     <span class="tag">AI & ML</span>
                     <span class="tag">Python</span>
                     <span class="tag">OpenCV</span>
-                    <span class="tag">TensorFlow</span>
                     <span class="tag">Flask</span>
                   </div>
                   <div class="project-year">2026</div>
@@ -1496,10 +1495,7 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
+    <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -1516,17 +1512,17 @@
   <!-- Web3Forms Ajax Script -->
   <script>
     const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
+
+    contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const formData = new FormData(contactForm);
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
-      
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = "Sending...";
-      
+
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -1535,21 +1531,21 @@
         },
         body: json
       })
-      .then(async (response) => {
-        if (response.status == 200) {
-          alert("Thank You! Your message has been sent successfully.");
-          contactForm.reset();
-        } else {
+        .then(async (response) => {
+          if (response.status == 200) {
+            alert("Thank You! Your message has been sent successfully.");
+            contactForm.reset();
+          } else {
+            alert("Something went wrong!");
+          }
+        })
+        .catch(error => {
+          console.error(error);
           alert("Something went wrong!");
-        }
-      })
-      .catch(error => {
-        console.error(error);
-        alert("Something went wrong!");
-      })
-      .then(function() {
-        submitBtn.innerHTML = originalText;
-      });
+        })
+        .then(function () {
+          submitBtn.innerHTML = originalText;
+        });
     });
   </script>
 
