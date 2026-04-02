@@ -686,7 +686,6 @@ h6 {
   background-color: var(--background-color);
   padding: 20px 0;
   position: relative;
-  margin-top: 75px;
 }
 
 .page-title h1 {
@@ -4304,7 +4303,7 @@ section,
 }
 
 .page-title {
-  padding: 100px 0 60px 0;
+  padding: 21px 0 11px 0;
   position: relative;
   background-color: var(--surface-color);
 }
